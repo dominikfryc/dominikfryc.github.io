@@ -1,8 +1,8 @@
 @import 'variables';
 
-/*--------------------------------------------------
-                       Essentials
---------------------------------------------------*/
+/* ------------------------------------------------------------ */
+/*                         Essentials                           */
+/* ------------------------------------------------------------ */
 html {
   height: 100%;
 }
@@ -70,7 +70,7 @@ aside {
   display: inline-block;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: $small-max) {
   main {
     text-align: center;
     max-width: none !important;
@@ -85,7 +85,7 @@ aside {
   }
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (min-width: $medium-min) and (max-width: $medium-max) {
   main {
     flex: 0 0 calc(100% - 330px) !important;
   }
@@ -95,9 +95,9 @@ main.single {
   flex: none !important;
 }
 
-/*--------------------------------------------------
-                       Header
---------------------------------------------------*/
+/* ------------------------------------------------------------ */
+/*                         Header                               */
+/* ------------------------------------------------------------ */
 header {
   background: $primary-color;
   height: 260px;
@@ -177,7 +177,7 @@ button.navbar-toggler i {
   display: none;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: $small-max) {
   .navbar-collapse {
     float: none;
     margin: 0;
@@ -219,16 +219,15 @@ button.navbar-toggler i {
 }
 
 /* Beta */
-/*@media (min-width: 768px) and (max-width: 819.98px) {*/
-/*.nav-item a {*/
-/*padding: .4rem .6rem !important;*/
-/*}*/
-/*}*/
+//@media (min-width: $medium-min) and (max-width: 819.98px) {
+//  .nav-item a {
+//    padding: .4rem .6rem !important;
+//  }
+//}
 
-
-/*--------------------------------------------------
-                       Article
---------------------------------------------------*/
+/* ------------------------------------------------------------ */
+/*                         Article                              */
+/* ------------------------------------------------------------ */
 article {
   max-width: 600px;
   border-radius: 5px;
@@ -268,7 +267,7 @@ article .image img:hover {
   top: 50%;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: $medium-max) {
   article .image, article .image a {
     height: auto !important;
     position: static;
@@ -349,7 +348,7 @@ h4 {
   margin-left: 20px;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: $medium-max) {
   .meta div {
     display: block;
     margin: 0;
@@ -433,9 +432,9 @@ article .button {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
 }
 
-/*--------------------------------------------------
-                       Sidebar
---------------------------------------------------*/
+/* ------------------------------------------------------------ */
+/*                         Sidebar                              */
+/* ------------------------------------------------------------ */
 .widget {
   margin: 0 auto 30px;
   max-width: 300px;
@@ -483,7 +482,7 @@ article .button {
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.4);
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: $small-max) {
   .bio {
     background: $primary-color;
     width: calc(100% + 30px);
@@ -566,9 +565,9 @@ article .button {
   display: block;
 }
 
-/*--------------------------------------------------
-                       Footer
---------------------------------------------------*/
+/* ------------------------------------------------------------ */
+/*                         Action                               */
+/* ------------------------------------------------------------ */
 .action {
   background: $primary-color;
   color: $white-color;
@@ -598,18 +597,17 @@ article .button {
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.4);
 }
 
-/*--------------------------------------------------
-                       Footer
---------------------------------------------------*/
+/* ------------------------------------------------------------ */
+/*                         Footer                               */
+/* ------------------------------------------------------------ */
 footer {
-  background: #37474F;
+  background: #373D4F;
   color: $white-color;
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   height: 117px;
-  box-shadow: 0 0 2px 0 rgba(60, 64, 67, 0.3), 0 0 6px 2px rgba(60, 64, 67, 0.15);
 }
 
 body {
@@ -640,7 +638,7 @@ footer .links a, footer .links a:hover {
   -webkit-text-stroke-width: 0;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: $medium-max) {
   footer .logo, footer .links {
     margin: 0 auto;
   }
@@ -660,7 +658,7 @@ footer .links a, footer .links a:hover {
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: $small-max) {
   footer {
     font-size: 11pt;
     height: 211px;
@@ -675,9 +673,9 @@ footer .links a, footer .links a:hover {
   }
 }
 
-/*--------------------------------------------------
-                    Waves effect
---------------------------------------------------*/
+/* ------------------------------------------------------------ */
+/*                         Waves effect                         */
+/* ------------------------------------------------------------ */
 .waves-effect {
   position: relative;
   cursor: pointer;
