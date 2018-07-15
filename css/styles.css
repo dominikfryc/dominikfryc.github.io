@@ -111,9 +111,14 @@ h1 {
   font-size: 0;
 }
 
-h1 img {
+.logo {
   width: 200px;
   height: 42px;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  display: inline-block;
+  background: url("../img/logo.svg");
 }
 
 nav.navbar {
@@ -132,16 +137,24 @@ nav.navbar {
 }
 
 .nav-item a {
+  font-size: 12pt;
+  border-radius: 25px;
   color: #FFF;
   -webkit-text-stroke-width: 0;
   padding: 0.4rem 1rem !important;
-  font-size: 12pt;
-  border-radius: 5px;
   transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .active a {
   background: rgba(0, 0, 0, 0.2);
+}
+
+.nav-link:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.nav-link:active {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
 }
 
 button.navbar-toggler {
@@ -278,7 +291,6 @@ article .image a {
   display: block;
   position: relative;
   z-index: 1;
-  font-size: 0;
 }
 
 article.old .image a {
@@ -292,9 +304,7 @@ article .text {
 
 h2 a, h3 a, h4 a {
   color: inherit;
-  text-decoration: inherit;
-  -webkit-transition: color 0.2s ease;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
   -webkit-text-stroke-width: 0.8px;
 }
 
@@ -347,6 +357,7 @@ h4 {
   font-size: 14pt !important;
   vertical-align: top;
   margin: 2px 2px 2px 0;
+  -webkit-text-stroke-width: 0;
 }
 
 .meta div:first-child {
@@ -365,14 +376,14 @@ h4 {
 }
 
 .button {
+  font-size: 11pt;
+  padding: 6px 18px;
+  color: #FFF;
+  text-decoration: none;
   display: inline-block;
   background: #3D5AFE;
-  color: #FFF;
-  font-size: 11pt;
-  text-decoration: none;
+  border-radius: 25px;
   -webkit-text-stroke-width: 0.4px;
-  padding: 6px 18px;
-  border-radius: 5px;
   transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -489,7 +500,9 @@ article .button {
   width: 2.5rem;
   height: 2.5rem;
   display: inline-block;
-  font-size: 0;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
   margin: 0 0.2rem;
   border-radius: 50%;
   background-size: contain !important;
@@ -527,7 +540,7 @@ article .button {
   padding: 0.4rem 1rem 0.4rem 2.2rem;
   border: none;
   outline: none;
-  transition: all 0.28s;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 11pt;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
@@ -587,25 +600,25 @@ article .button {
 /*                         Footer                               */
 /* ------------------------------------------------------------ */
 footer {
-  background: #373D4F;
+  background: #384651;
   color: #FFF;
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  height: 117px;
+  height: 7rem;
+  font-size: 11pt;
 }
 
 body {
-  padding-bottom: 132px;
+  padding-bottom: calc(7rem + 15px);
 }
 
 footer .row {
-  padding: 30px 15px;
+  padding: 1.8rem 15px;
 }
 
 footer .logo {
-  font-size: 0;
   width: 160px;
   height: 34px;
 }
@@ -653,10 +666,15 @@ footer .links a, footer .links a:hover {
     padding-bottom: 211px;
   }
 
-  footer .links a {
+  footer .links a, footer .links a:hover {
     margin: 0.25rem;
   }
 }
+footer .wrapper {
+  position: absolute;
+  bottom: 0;
+}
+
 /* ------------------------------------------------------------ */
 /*                         Waves effect                         */
 /* ------------------------------------------------------------ */
@@ -710,23 +728,6 @@ footer .links a, footer .links a:hover {
   z-index: -1;
 }
 
-.waves-circle {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
-}
-
-.waves-circle {
-  text-align: center;
-  width: 2.5em;
-  height: 2.5em;
-  line-height: 2.5em;
-  border-radius: 50%;
-  -webkit-mask-image: none;
-}
-
 .waves-effect .waves-ripple {
   z-index: -1;
 }
-
-/*# sourceMappingURL=styles.css.map */

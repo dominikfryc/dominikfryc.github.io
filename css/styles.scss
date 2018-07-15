@@ -115,9 +115,14 @@ h1 {
   font-size: 0;
 }
 
-h1 img {
+.logo {
   width: 200px;
   height: 42px;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  display: inline-block;
+  background: url("../img/logo.svg");
 }
 
 nav.navbar {
@@ -136,16 +141,20 @@ nav.navbar {
 }
 
 .nav-item a {
+  font-size: 12pt;
+  border-radius: $border-radius;
   color: $white-color;
   -webkit-text-stroke-width: 0;
-  padding: .4rem 1rem !important;
-  font-size: 12pt;
-  border-radius: 5px;
-  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: .5rem 1rem .4rem !important;
+  transition: $linear-transition;
 }
 
-.active a {
-  background: rgba(0, 0, 0, 0.20);
+.active a, .active a:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.nav-link:hover {
+  background: rgba(0, 0, 0, 0.1);
 }
 
 button.navbar-toggler {
@@ -189,9 +198,10 @@ button.navbar-toggler i {
     text-align: center;
   }
 
-  h1 img {
+  .logo {
     width: 160px;
     height: 36px;
+    text-align: center;
   }
 
   header {
@@ -215,6 +225,13 @@ button.navbar-toggler i {
     top: 20px;
     right: 15px;
     left: auto;
+  }
+}
+
+@media (min-width: $medium-min) and (max-width: $medium-max) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -290,7 +307,6 @@ article .image a {
   display: block;
   position: relative;
   z-index: 1;
-  font-size: 0;
 }
 
 article.old .image a {
@@ -304,9 +320,7 @@ article .text {
 
 h2 a, h3 a, h4 a {
   color: inherit;
-  text-decoration: inherit;
-  -webkit-transition: color .2s ease;
-  transition: color .2s ease;
+  transition: all .2s ease;
   -webkit-text-stroke-width: .8px;
 }
 
@@ -360,6 +374,7 @@ h4 {
   font-size: 14pt !important;
   vertical-align: top;
   margin: 2px 2px 2px 0;
+  -webkit-text-stroke-width: 0;
 }
 
 .meta div:first-child {
@@ -369,29 +384,27 @@ h4 {
 .meta a {
   color: inherit;
   -webkit-text-stroke-width: .4px;
-  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: $linear-transition;
 }
 
 .meta a:hover {
   color: #444;
-  text-decoration: none;
 }
 
 .button {
+  font-size: 11pt;
+  padding: 6px 18px;
+  color: $white-color;
   display: inline-block;
   background: $primary-color;
-  color: $white-color;
-  font-size: 11pt;
-  text-decoration: none;
+  border-radius: $border-radius;
   -webkit-text-stroke-width: .4px;
-  padding: 6px 18px;
-  border-radius: 5px;
-  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: $linear-transition;
 }
 
 .button:hover {
   color: $white-color;
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
+  box-shadow: $shadow-2;
 }
 
 article .button {
@@ -416,7 +429,7 @@ article .button {
   color: #111;
   background: rgba(0,0,0,0.1);
   -webkit-text-stroke-width: .5px;
-  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: $linear-transition;
 }
 
 .pagination .waves-light {
@@ -429,7 +442,23 @@ article .button {
 }
 
 .pagination a:hover {
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
+  box-shadow: $shadow-2;
+}
+
+@media (max-width: $small-max) {
+  h2 {
+    font-size: 18pt;
+    line-height: 26pt;
+    margin: 10px 0 10px;
+  }
+
+  article .text {
+    padding: 10px 24px;
+  }
+
+  article .button {
+    margin-top: -48px;
+  }
 }
 
 /* ------------------------------------------------------------ */
@@ -451,8 +480,8 @@ article .button {
   height: 100px;
   border-radius: 50px;
   margin: 18px 0 0 0;
-  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  transition: $linear-transition;
+  box-shadow: $shadow-1;
 }
 
 .bio .photo img {
@@ -475,11 +504,11 @@ article .button {
   color: $primary-color;
   margin: 80px 0 0 -120px;
   -webkit-text-stroke-width: .8px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: $shadow-1;
 }
 
 .bio .button:hover, .bio .photo:hover {
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.4);
+  box-shadow: $shadow-3;
 }
 
 @media (max-width: $small-max) {
@@ -503,15 +532,17 @@ article .button {
   width: 2.5rem;
   height: 2.5rem;
   display: inline-block;
-  font-size: 0;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
   margin: 0 .2rem;
   border-radius: 50%;
   background-size: contain !important;
-  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: $linear-transition;
 }
 
 .social-icons a:hover {
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
+  box-shadow: $shadow-2;
 }
 
 .social-icons a:first-child {
@@ -541,13 +572,13 @@ article .button {
   padding: .4rem 1rem .4rem 2.2rem;
   border: none;
   outline: none;
-  transition: all .28s;
+  transition: $linear-transition;
   font-size: 11pt;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)
+  box-shadow: $shadow-1;
 }
 
 .search-box:hover, .search-box:focus {
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
+  box-shadow: $shadow-2;
 }
 
 .search-box:focus {
@@ -563,6 +594,16 @@ article .button {
   width: 20px;
   height: 20px;
   display: block;
+}
+
+@media (max-width: $small-max) {
+  .social-icons {
+    text-align: center;
+  }
+
+  .search-box {
+    width: 100%;
+  }
 }
 
 /* ------------------------------------------------------------ */
@@ -590,36 +631,36 @@ article .button {
   font-size: 16pt;
   padding: .6rem 1.6rem;
   -webkit-text-stroke-width: 1px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: $shadow-1;
 }
 
 .action .button:hover {
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.4);
+  box-shadow: $shadow-3;
 }
 
 /* ------------------------------------------------------------ */
 /*                         Footer                               */
 /* ------------------------------------------------------------ */
 footer {
-  background: #373D4F;
+  background: #384651;
   color: $white-color;
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  height: 117px;
+  height: 7rem;
+  font-size: 11pt;
 }
 
 body {
-  padding-bottom: 132px;
+  padding-bottom: calc(7rem + 15px);
 }
 
 footer .row {
-  padding: 30px 15px;
+  padding: 1.8rem 15px;
 }
 
 footer .logo {
-  font-size: 0;
   width: 160px;
   height: 34px;
 }
@@ -668,72 +709,14 @@ footer .links a, footer .links a:hover {
     padding-bottom: 211px;
   }
 
-  footer .links a {
+  footer .links a, footer .links a:hover {
     margin: .25rem;
   }
 }
 
-/* ------------------------------------------------------------ */
-/*                         Waves effect                         */
-/* ------------------------------------------------------------ */
-.waves-effect {
-  position: relative;
-  cursor: pointer;
-  display: inline-block;
-  overflow: hidden;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-  vertical-align: middle;
-  z-index: 1;
-  transition: .3s ease-out;
-}
-.waves-effect .waves-ripple {
+footer .wrapper {
   position: absolute;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  margin-top: -10px;
-  margin-left: -10px;
-  opacity: 0;
-  background: rgba(0, 0, 0, 0.2);
-  transition: all 0.7s ease-out;
-  transition-property: opacity, -webkit-transform;
-  transition-property: transform, opacity;
-  transition-property: transform, opacity, -webkit-transform;
-  -webkit-transform: scale(0);
-  transform: scale(0);
-  pointer-events: none;
+  bottom: 0;
 }
-.waves-effect.waves-light .waves-ripple {
-  background-color: rgba(255, 255, 255, 0.45);
-}
-.waves-effect input[type="button"], .waves-effect input[type="reset"], .waves-effect input[type="submit"] {
-  border: 0;
-  font-style: normal;
-  font-size: inherit;
-  text-transform: inherit;
-  background: none;
-}
-.waves-effect img {
-  position: relative;
-  z-index: -1;
-}
-.waves-circle {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
-}
-.waves-circle {
-  text-align: center;
-  width: 2.5em;
-  height: 2.5em;
-  line-height: 2.5em;
-  border-radius: 50%;
-  -webkit-mask-image: none;
-}
-.waves-effect .waves-ripple {
-  z-index: -1;
-}
+
+@import 'waves';
