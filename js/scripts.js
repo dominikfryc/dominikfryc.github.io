@@ -1,12 +1,12 @@
 $(document).ready(function() {
 
-    $('.fancybox').fancybox();
-
     // FancyBox
-    $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif'],.fancybox").fancybox({
+    $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif'],.fancybox").attr('rel', 'gallery').fancybox({
         padding : 0,
         openEffect	: 'elastic',
         closeEffect	: 'elastic',
+        openSpeed	: 'fast',
+        closeSpeed	: 'fast',
         beforeShow : function() {
             var alt = this.element.find('img').attr('alt');
             this.inner.find('img').attr('alt', alt);
@@ -18,12 +18,16 @@ $(document).ready(function() {
                     return false; /* Disables right click */
                 })
                 .prependTo( $.fancybox.inner );
+
+            /* Disable right click */
+            $.fancybox.wrap.bind("contextmenu", function (e) {
+                return false;
+            });
         },
         helpers : {
             overlay : {
                 css : {
-                    'background' : 'rgba(31, 36, 42, 1)',
-                    'transition' : 'all .5s linear'
+                    'background' : 'rgba(31, 36, 42, 1)'
                 }
             },
             title: {
@@ -33,6 +37,12 @@ $(document).ready(function() {
     });
 
     // Preload watermark image
-    new Image().src = 'img/logo.svg';
+    new Image().src = 'https://dominikfryc.github.io/img/logo.svg';
+
+    // Scroll to top
+    $("footer .logo").click(function() {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
 
 });
