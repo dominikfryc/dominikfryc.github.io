@@ -25,11 +25,6 @@ $(document).ready(function() {
             });
         },
         helpers : {
-            overlay : {
-                css : {
-                    'background' : 'rgba(31, 36, 42, 1)'
-                }
-            },
             title: {
                 type: 'outside'
             }
@@ -43,6 +38,11 @@ $(document).ready(function() {
     $("footer .logo").click(function() {
         $("html, body").animate({ scrollTop: 0 }, "slow");
         return false;
+    });
+
+    // Scroll to comments
+    $("a[href$='#comments']").click(function() {
+        $("html, body").animate({ scrollTop: $("#comments").offset().top }, "slow");
     });
 
 });
