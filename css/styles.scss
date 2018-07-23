@@ -131,12 +131,6 @@ header .wrapper, footer .wrapper {
   height: 20px;
 }
 
-@media (max-width: $small-max) {
-  header .wrapper {
-    display: none;
-  }
-}
-
 .top {
   margin: 1.8rem 0;
   font-size: 0;
