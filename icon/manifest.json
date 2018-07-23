@@ -1,6 +1,11 @@
 {
-  "name": "Osobní blog Dominika Fryče",
+  "name": "Dominik Fryč",
   "short_name": "Dominik Fryč",
+  "description": "A simply readable Hacker News app.",
+  "theme_color": "green",
+  "background_color": "#1f2533",
+  "display": "standalone",
+  "start_url": "/?utm_source=pwa",
   "icons": [
     {
       "src": "android-icon-48x48.png",
@@ -42,9 +47,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "theme_color": "#1f2533",
-  "background_color": "#ff0000",
-  "display": "standalone",
-  "start_url": "/?utm_source=pwa"
+  ]
 }
