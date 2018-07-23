@@ -2,7 +2,7 @@
   "name": "Dominik Fryč",
   "short_name": "Dominik Fryč",
   "description": "A simply readable Hacker News app.",
-  "theme_color": "green",
+  "theme_color": "#171c26",
   "background_color": "#1f2533",
   "display": "standalone",
   "start_url": "/?utm_source=pwa",
