@@ -1,11 +1,11 @@
 {
-  "name": "",
+  "name": "Dominik Fryč",
   "short_name": "Dominik Fryč",
   "description": "Osobní blog Dominika Fryče",
   "theme_color": "#171c26",
   "background_color": "#1f2533",
   "display": "standalone",
-  "start_url": "/?utm_source=pwa",
+  "start_url": ".",
   "icons": [
     {
       "src": "android-icon-48x48.png",
