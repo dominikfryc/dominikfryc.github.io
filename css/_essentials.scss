@@ -1,0 +1,124 @@
+@import "variables";
+
+/* ------------------------------------------------------------ */
+/*                         Essentials                           */
+/* ------------------------------------------------------------ */
+html {
+  height: 100%;
+}
+
+body {
+  color: #222;
+  background: #f3f5f6;
+  font-family: 'Nunito', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  font-weight: normal;
+  outline: none;
+  -webkit-text-stroke: .8px $primary-color;
+}
+
+a:hover {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+p {
+  font-size: 12pt;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+p a:hover {
+  box-shadow: inset 0 -1.5px 0 $primary-color;
+}
+
+.container {
+  max-width: 970px;
+}
+
+.main {
+  margin-top: -140px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main {
+  max-width: 630px !important;
+}
+
+aside {
+  min-width: 330px;
+}
+
+@media (min-width: $large-min) {
+  main {
+    margin-left: auto;
+  }
+}
+
+.visible-xs {
+  display: none;
+}
+
+.hidden-xs {
+  display: inline-block;
+}
+
+.text-hide {
+  margin: 0;
+}
+
+@media (max-width: $small-max) {
+  main {
+    text-align: center;
+    max-width: none !important;
+  }
+
+  .visible-xs {
+    display: inline-block;
+  }
+
+  .hidden-xs {
+    display: none;
+  }
+
+  aside {
+    min-width: auto;
+  }
+}
+
+@media (min-width: $medium-min) and (max-width: $medium-max) {
+  main {
+    flex: 0 0 calc(100% - 330px) !important;
+  }
+}
+
+.page main {
+  flex: none !important;
+}
+
+::selection {
+  color: #fff;
+  background: #465efe;
+  -webkit-text-stroke-color: #fff;
+}
+
+.bio ::selection, .pagination ::selection, .tags .body ::selection {
+  color: inherit;
+  -webkit-text-stroke-color: inherit;
+}

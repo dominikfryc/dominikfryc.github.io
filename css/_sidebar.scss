@@ -1,0 +1,274 @@
+@import "variables";
+
+/* ------------------------------------------------------------ */
+/*                         Sidebar                              */
+/* ------------------------------------------------------------ */
+.widget {
+  margin: 0 auto 30px;
+  max-width: 300px;
+  color: #333;
+}
+
+.widget img {
+  max-width: 100%;
+}
+
+.bio {
+  margin-top: -18px;
+  margin-bottom: 70px;
+}
+
+.bio .photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  margin: 18px 0 0 0;
+  transition: $linear-transition;
+  box-shadow: $shadow-1;
+}
+
+.bio .photo img {
+  width: 100px;
+  height: 100px;
+}
+
+.bio div {
+  color: #fff;
+  font-size: 13pt;
+  position: relative;
+  line-height: 18pt;
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 16px;
+}
+
+.bio .button {
+  background: #fff;
+  color: $primary-color;
+  margin: 80px 0 0 -120px;
+  -webkit-text-stroke: .8px $primary-color;
+  box-shadow: $shadow-1;
+}
+
+.bio .button:hover, .bio .photo:hover {
+  color: $primary-color;
+  box-shadow: $shadow-3;
+}
+
+@media (max-width: $small-max) {
+  .bio {
+    background: $primary-color;
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    padding: 10px 0 30px;
+    text-align: center;
+    max-width: none;
+  }
+
+  .bio .photo {
+    margin-left: -18px;
+  }
+}
+
+.social-icons a {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: inline-block;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  margin: 0 .2rem;
+  border-radius: 50%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: $linear-transition;
+}
+
+.social-icons a:hover {
+  box-shadow: $shadow-2;
+}
+
+.social-icons a:first-child {
+  background-image: url("../img/facebook.svg");
+  background-color: $facebook-color;
+}
+
+.social-icons a:nth-child(2) {
+  background-image: url("../img/twitter.svg");
+  background-color: $twitter-color;
+}
+
+.social-icons a:nth-child(3) {
+  background-image: url("../img/instagram.svg");
+  background-color: $instagram-color;
+}
+
+.social-icons a:nth-child(4) {
+  background-image: url("../img/email.svg");
+  background-color: $email-color;
+}
+
+.social-icons a:last-child {
+  background-image: url("../img/rss.svg");
+  background-color: $rss-color;
+  background-size: 45%;
+}
+
+.search-box {
+  width: 80%;
+  border: none;
+  outline: none;
+  color: #495057;
+  display: block;
+  font-size: 12pt;
+  border-radius: 2rem;
+  padding: .4rem 1rem .4rem 2.5rem;
+  transition: $linear-transition;
+  box-shadow: $shadow-1;
+}
+
+.search-box:hover, .search-box:focus {
+  box-shadow: $shadow-2;
+}
+
+.search-box:focus {
+  width: 100%;
+}
+
+.search-icon {
+  color: #888;
+  font-size: 14pt;
+  position: relative;
+  top: -1.75rem;
+  left: .75rem;
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin-bottom: -1rem;
+}
+
+@media (max-width: $small-max) {
+  .social-icons {
+    text-align: center;
+  }
+
+  .search-box {
+    width: 100%;
+    padding-top: .6rem;
+    padding-bottom: .4rem;
+  }
+}
+
+.widget .post {
+  display: block;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15);
+}
+
+.widget .post a {
+  width: 100%;
+}
+
+.widget .post h4 {
+  position: absolute;
+  bottom: .75rem;
+  left: 1rem;
+  padding-right: 1rem;
+  color: white;
+  -webkit-text-stroke-width: .4px;
+  -webkit-text-stroke-color: white;
+  margin: 0;
+  z-index: 1;
+  text-shadow: 0 0 2rem black;
+}
+
+.widget .post .image {
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+  transition: $linear-transition;
+}
+
+.widget .post .image:hover, .widget .post .image:hover::after {
+  height: 120px;
+}
+
+.widget .post .image::after {
+  display: block;
+  position: relative;
+  background-image: linear-gradient(to bottom, transparent 33%, rgba(0,0,0,.66) 100%);
+  transition: $linear-transition;
+  height: 100px;
+  width: 100%;
+  content: '';
+}
+
+.widget .post .image img {
+  width: 100%;
+  vertical-align: middle;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%) scale(1.2);
+  transform: translateY(-50%) translateX(-50%) scale(1.2);
+}
+
+.last-comments {
+  padding: 0;
+  list-style: none;
+}
+
+.last-comments li {
+  padding: .5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.last-comments li:last-child {
+  border: none;
+}
+
+.last-comments i {
+  font-size: 12pt;
+  vertical-align: sub;
+  background: $primary-color;
+  padding: 6px;
+  color: white;
+  border-radius: 1rem;
+  margin-right: 5px;
+}
+
+.comment-author {
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.comment-author strong {
+  margin-right: 5px;
+}
+
+.comment-article {
+  padding-left: 2.3rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-top: -8px;
+}
+
+.last-comments a {
+  color: #333;
+  -webkit-text-stroke: .8px #333;
+  transition: $linear-transition;
+}
+
+.last-comments a:hover {
+  color: $primary-color;
+  -webkit-text-stroke: .8px $primary-color;
+}

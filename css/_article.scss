@@ -1,0 +1,653 @@
+@import "variables";
+
+/* ------------------------------------------------------------ */
+/*                         Article                              */
+/* ------------------------------------------------------------ */
+article {
+  max-width: 600px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 2px 6px 2px rgba(60, 64, 67, 0.15);
+  overflow: hidden;
+  margin-bottom: 30px;
+  text-align: left;
+  display: inline-block;
+  background: #fff;
+}
+
+article .image {
+  overflow: hidden;
+  position: relative;
+}
+
+article .image a {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+article .image, article .image a {
+  height: 240px;
+}
+
+article.old .image, article.old .image a {
+  height: 200px;
+}
+
+article .image img {
+  width: 100%;
+  vertical-align: middle;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transition: width .5s ease;
+  transition: width .5s ease;
+}
+
+article .image a img:hover {
+  width: 105%;
+}
+
+@media (max-width: 504px), (min-width: 768px) and (max-width: 864px) {
+  article .image img {
+    position: relative;
+    transform: none;
+    top: 0;
+    left: 0;
+  }
+
+  article .image, article .image a {
+    height: auto;
+  }
+}
+
+@media (max-width: $medium-max) {
+  article.old .image img {
+    position: relative;
+    transform: none;
+    top: 0;
+    left: 0;
+  }
+
+  article.old .image, article.old .image a {
+    height: auto;
+  }
+
+  article .image a img:hover {
+    width: 100%;
+  }
+}
+
+article .content {
+  background: #fff;
+  padding: 30px;
+}
+
+h1 {
+  font-size: 24pt;
+  line-height: 1.5;
+  margin: 0 0 1rem;
+  color: #fff;
+  -webkit-text-stroke: .4px #fff;
+}
+
+h1 small {
+  margin-right: 4px;
+}
+
+.headline {
+  font-size: 12pt;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.title {
+  color: inherit;
+  font-size: 20pt;
+  line-height: 28pt;
+  margin: -4px 0 15px;
+  -webkit-text-stroke-width: .8px;
+  -webkit-text-stroke-color: inherit;
+}
+
+h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: inherit;
+  transition: all .2s ease;
+  -webkit-text-stroke-width: .8px;
+  -webkit-text-stroke-color: inherit;
+}
+
+h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+  color: $primary-color;
+  -webkit-text-stroke: .8px $primary-color;
+}
+
+h2 small {
+  color: #999;
+  font-size: 14pt;
+  -webkit-text-stroke-width: 0;
+}
+
+h2, h3, h4, h5, h6 {
+  -webkit-text-stroke-width: .8px;
+  -webkit-text-stroke-color: inherit;
+  margin: 10px 0;
+}
+
+h2 {
+  font-size: 20pt;
+  line-height: 28pt;
+  margin: 10px 0 15px;
+}
+
+h3 {
+  font-size: 18pt;
+  line-height: 24pt;
+}
+
+h4 {
+  font-size: 16pt;
+  line-height: 20pt;
+}
+
+h5 {
+  font-size: 14pt;
+  line-height: 20pt;
+}
+
+h6 {
+  font-size: 12pt;
+  line-height: 20pt;
+}
+
+article h2 {
+  font-size: 18pt;
+  line-height: 24pt;
+}
+
+article h3 {
+  font-size: 16pt;
+  line-height: 20pt;
+}
+
+article h4 {
+  font-size: 14pt;
+  line-height: 20pt;
+}
+
+article h5 {
+  font-size: 12pt;
+  line-height: 20pt;
+}
+
+article h6 {
+  font-size: 10pt;
+  line-height: 20pt;
+}
+
+article ul li, article ol li {
+  padding: 2px 0;
+}
+
+article ul, article ol {
+  padding-left: 1.7rem;
+}
+
+pre {
+  background: #eee;
+  padding: 10px 15px;
+  border-radius: 4px;
+  overflow: auto;
+}
+
+th, strong {
+  font-weight: normal;
+  -webkit-text-stroke-width: .8px;
+  -webkit-text-stroke-color: inherit;
+}
+
+blockquote {
+  margin: 0 auto 1rem;
+  font-style: italic;
+  font-size: 1.25rem;
+  width: 90%;
+}
+
+blockquote p {
+  font-size: 16pt;
+}
+
+cite {
+  display: block;
+  font-size: 80%;
+  color: #6c757d;
+  text-align: right;
+}
+
+cite::before {
+  content: "\2014 \00A0";
+}
+
+.img-full {
+  width: calc(100% + 60px);
+  margin: 10px 0 25px -30px;
+  border-radius: 0 !important;
+}
+
+.img-fluid {
+  width: 100%;
+}
+
+.img-single {
+  float: left;
+  margin: 0 1.5rem 1rem 0;
+  height: auto;
+}
+
+.img-single-right {
+  float: right;
+  margin: 0 0 1rem 1.5rem;
+  height: auto;
+}
+
+.single-2 {
+  width: 50%;
+}
+
+.single-3 {
+  width: 33%;
+}
+
+.single-4 {
+  width: 25%;
+}
+
+.single-5 {
+  width: 20%;
+}
+
+.single-6 {
+  width: 15%;
+}
+
+@media (max-width: $small-max) {
+  .single-2, .single-3 {
+    width: calc(100% + 60px);
+    margin: 10px 0 25px -30px;
+  }
+}
+
+article .text img {
+  border-radius: .25rem;
+  transition: $linear-transition;
+}
+
+.borderless {
+  border-radius: 0 !important;
+}
+
+.embed-responsive {
+  width: calc(100% + 60px);
+  margin: 25px 0 20px -30px;
+}
+
+.meta {
+  color: #888;
+  font-size: 11pt;
+  margin: 20px 0 4px;
+  -webkit-text-stroke: .4px #888;
+}
+
+.meta div {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+@media (max-width: $medium-max) {
+  .meta div {
+    display: block;
+    margin: 2px 0;
+  }
+}
+
+.meta div i.material-icons {
+  display: inline-block;
+  font-size: 14pt !important;
+  vertical-align: top;
+  margin: 1px 2px 2px 0;
+  -webkit-text-stroke-width: 0;
+}
+
+.meta a {
+  color: #888;
+  -webkit-text-stroke: .4px #888;
+  transition: $linear-transition;
+}
+
+.meta a:hover {
+  color: #444;
+  -webkit-text-stroke: .4px #444;
+}
+
+.single .meta {
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: $medium-max) {
+  .single .meta {
+    margin-bottom: 16px;
+  }
+
+  .single .meta div {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .meta div i.material-icons {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: $small-max) {
+  .single .meta {
+    margin-top: -6px;
+  }
+}
+
+.button {
+  border: none;
+  font-size: 11pt;
+  padding: 6px 18px;
+  color: #fff;
+  display: inline-block;
+  background: $primary-color;
+  border-radius: $border-radius;
+  -webkit-text-stroke: .4px #fff;
+  transition: $linear-transition;
+}
+
+.button:hover {
+  color: #fff;
+  box-shadow: $shadow-2;
+}
+
+@media (max-width: $medium-max) {
+  .button {
+    padding-top: 8px;
+  }
+}
+
+article .button {
+  float: right;
+  margin-top: -32px;
+}
+
+.tail hr {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  width: calc(100% + 60px);
+  margin-left: -30px;
+}
+
+.tail {
+  color: #333;
+  font-size: 11pt;
+}
+
+.tail .head {
+  position: absolute;
+}
+
+.tail .body {
+  width: 100%;
+  padding-left: 2rem;
+}
+
+.tags .head {
+  margin-top: 2px;
+}
+
+.tags .body {
+  margin-bottom: 1rem;
+}
+
+.tail i {
+  font-size: 16pt;
+  margin-top: 4px;
+}
+
+.tag {
+  color: #666;
+  margin: 4px 2px;
+  display: inline-block;
+  transition: $linear-transition;
+  -webkit-text-stroke: .6px #666;
+  background: #eee;
+  padding: 4px 10px 3px;
+  border-radius: 1rem;
+  font-size: 10pt;
+}
+
+.tag:before {
+  content: "#";
+  margin-right: 1px;
+}
+
+.tag:hover {
+  color: #666;
+  -webkit-text-stroke: .6px #666;
+  box-shadow: $shadow-1;
+}
+
+.share a {
+  color: #fff;
+  margin: 0 .2rem;
+  border-radius: 2rem;
+  display: inline-block;
+  padding: .26rem 1rem .24rem 2.3rem;
+  background-position: .7rem !important;
+  -webkit-text-stroke: .4px #fff;
+  transition: $linear-transition;
+}
+
+.share a:hover {
+  box-shadow: $shadow-2;
+}
+
+.share a:first-child {
+  background: $facebook-color url("../img/facebook.svg") center no-repeat;
+  background-size: 1rem;
+}
+
+.share a:nth-child(2) {
+  background: $twitter-color url("../img/twitter.svg") center no-repeat;
+  background-size: 1rem;
+}
+
+.share a:last-child {
+  background: $email-color url("../img/googleplus.svg") center no-repeat;
+  background-size: 1.2rem;
+  padding-left: 2.4rem;
+}
+
+@media (max-width: $large-max) {
+  .share a {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    width: 2rem;
+    height: 2rem;
+    padding: 0 !important;
+    background-position: center !important;
+  }
+}
+
+.recent {
+  margin-bottom: -0.5rem;
+  text-align: left;
+  max-width: 600px;
+  display: inline-block;
+}
+
+.recent h2 {
+  margin-top: 0;
+}
+
+.recent .post {
+  overflow: hidden;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+  transition: $linear-transition;
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15);
+}
+
+.recent .post:hover {
+  box-shadow: 0 3px 6px 0 rgba(60,64,67,.3), 0 4px 12px 6px rgba(60,64,67,.15);
+}
+
+.recent .post img {
+  width: 100%;
+}
+
+.recent .post .image {
+  overflow: hidden;
+  position: relative;
+}
+
+.recent .post .image a {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.recent .post .image img {
+  width: 100%;
+  vertical-align: middle;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transition: width .5s ease;
+  transition: width .5s ease;
+}
+
+.recent .post .image, .recent .post .image a {
+  height: 140px;
+}
+
+@media (min-width: $small-min) {
+  .recent .post .image img {
+    position: relative;
+    transform: none;
+    top: 0;
+    left: 0;
+  }
+
+  .recent .post .image, .recent .post .image a {
+    height: auto;
+  }
+}
+
+@media (min-width: $medium-min) and (max-width: 929px) {
+  .col-sm-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.recent .post .content {
+  padding: 20px;
+  background: #fff;
+}
+
+.recent .post h3 {
+  font-size: 16pt;
+  line-height: 22pt;
+  margin: -2px 0;
+}
+
+.recent .meta {
+  margin: .8rem 0 0 0;
+}
+
+.pagination {
+  text-align: center;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.pagination a, .pagination span {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  padding: .3rem;
+  border-radius: 1rem;
+  margin: 0 .2rem;
+  font-size: 11pt;
+  color: #111;
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-text-stroke: .5px #111;
+  transition: $linear-transition;
+}
+
+.pagination .waves-light {
+  color: #fff;
+  background: $primary-color;
+  -webkit-text-stroke: .5px #fff;
+}
+
+.pagination span {
+  background: transparent !important;
+}
+
+.pagination a:hover {
+  box-shadow: $shadow-2;
+}
+
+@media (max-width: $small-max) {
+  .title {
+    margin-top: -2px;
+  }
+
+  h2 {
+    font-size: 18pt;
+    line-height: 24pt;
+    margin: 10px 0 10px;
+  }
+
+  h3 {
+    font-size: 16pt;
+    line-height: 22pt;
+  }
+
+  h4 {
+    font-size: 14pt;
+    line-height: 20pt;
+  }
+
+  h5 {
+    font-size: 13pt;
+    line-height: 18pt;
+  }
+
+  h6 {
+    font-size: 12pt;
+    line-height: 16pt;
+  }
+
+  article .content {
+    padding: 24px;
+  }
+
+  article .button {
+    margin-top: -38px;
+  }
+
+  .pagination a, .pagination span {
+    padding: .4rem;
+  }
+}

@@ -1,0 +1,194 @@
+@import "variables";
+
+/* ------------------------------------------------------------ */
+/*                         About                                */
+/* ------------------------------------------------------------ */
+.profile {
+  width: 128px;
+  float: right;
+  margin: 0 0 1rem 1rem;
+  border-radius: 5rem !important;
+}
+
+.page article {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.skills {
+  margin-bottom: 3rem;
+}
+
+.skills h2 {
+  color: #333;
+  font-size: 22pt;
+  text-align: center;
+  padding: 2rem 0;
+  margin: 0;
+}
+
+.skill {
+  position: relative;
+  background: white;
+  padding: 3rem 1.5rem 1.5rem;
+  text-align: center;
+  border-radius: 5px;
+  margin: 1.5rem 0;
+  transition: $linear-transition;
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15);
+}
+
+.skill:hover {
+  box-shadow: 0 3px 6px 0 rgba(60,64,67,.3), 0 4px 12px 6px rgba(60,64,67,.15);
+}
+
+.skills a {
+  color: #333;
+  -webkit-text-stroke-color: #333;
+}
+
+.skills h3 {
+  font-size: 16pt;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.skill .design {
+  background: $primary-color url("../img/design.svg") center center no-repeat;
+}
+
+.skill .web {
+  background: $primary-color url("../img/web.svg") center center no-repeat;
+}
+
+.skill .app {
+  background: $primary-color url("../img/app.svg") center center no-repeat;
+}
+
+.skill .graphics {
+  background: $primary-color url("../img/graphics.svg") center center no-repeat;
+}
+
+.skill .photo {
+  background: $primary-color url("../img/photo.svg") center center no-repeat;
+}
+
+.skill .sphere {
+  background: $primary-color url("../img/sphere.svg") center center no-repeat;
+}
+
+.skill .seo {
+  background: $primary-color url("../img/seo.svg") center center no-repeat;
+}
+
+.skill .service {
+  background: $primary-color url("../img/service.svg") center center no-repeat;
+}
+
+.skill .icon {
+  background-color: $primary-color;
+  background-size: 50%;
+  width: 60px;
+  height: 60px;
+  border-radius: 2rem;
+  box-shadow: $shadow-1;
+  position: absolute;
+  top: -1.5rem;
+  left: calc(50% - 30px);
+}
+
+.references {
+  background: $primary-color;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.references .col-md-4 {
+  margin-bottom: 1.5rem;
+}
+
+.references article {
+  transition: $linear-transition;
+  text-align: center;
+  height: 100%;
+  margin: 0;
+}
+
+.references article:hover {
+  box-shadow: 0 3px 6px 0 rgba(60,64,67,.3), 0 4px 12px 6px rgba(60,64,67,.3);
+}
+
+.references .content {
+  padding: 1.55rem;
+}
+
+.references img {
+  max-width: 100%;
+}
+
+.references h2 {
+  color: white;
+  -webkit-text-stroke: .4px white;
+  font-size: 24pt;
+  text-align: center;
+  padding: 2rem 0;
+  margin: 0;
+}
+
+.references h3 {
+  padding: 0;
+  margin: -0.25rem 0 .5rem;
+  line-height: 1.5;
+}
+
+.references ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 -.5rem;
+}
+
+.references .tag:before {
+  content: '';
+}
+
+.references .tag:hover {
+  box-shadow: none;
+}
+
+.references .button {
+  color: $primary-color;
+  -webkit-text-stroke: .8px $primary-color;
+  background: white;
+  margin: .5rem 0 2.5rem;
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15);
+}
+
+.references .button:hover {
+  box-shadow: 0 2px 4px 0 rgba(60,64,67,.3), 0 4px 12px 3px rgba(60,64,67,.3);
+}
+
+.action {
+  padding: 4rem 0;
+  text-align: center;
+  margin-bottom: -1rem;
+}
+
+.action h2 {
+  width: 100%;
+  font-size: 20pt;
+  color: #444;
+  -webkit-text-stroke: .8px #444;
+  margin: 0 0 2rem;
+}
+
+.action .button {
+  color: white;
+  display: inline-block;
+  font-size: 18pt;
+  border-radius: 3rem;
+  padding: 1rem 2rem;
+}
+
+.action .button:hover {
+  box-shadow: $shadow-3;
+}

@@ -1,0 +1,152 @@
+@import "variables";
+
+/* ------------------------------------------------------------ */
+/*                         Comments                             */
+/* ------------------------------------------------------------ */
+.comments {
+    text-align: left;
+    max-width: 600px;
+    display: inline-block;
+}
+
+.comments-block {
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+        0 2px 6px 2px rgba(60, 64, 67, 0.15);
+}
+
+.comment {
+    width: 100%;
+    display: table;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.comment:last-child {
+    border-bottom: none;
+}
+
+.comment img {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    float: left;
+}
+
+.comments h2 {
+    margin-top: 20px;
+}
+
+.comments h3 {
+    margin: 2rem 0 1rem;
+}
+
+.comment h3,
+.comment small {
+    display: table;
+    margin: 0 0 0 4rem;
+}
+
+.comment .verified {
+    width: 18px;
+    height: 18px;
+    margin-left: 2px;
+    background: url("../img/verified.svg") no-repeat;
+    background-size: contain;
+    display: inline-block;
+}
+
+.comment small {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: table;
+    width: 100%;
+}
+
+form .button {
+    float: right;
+    margin-top: 0.5rem;
+}
+
+.comment-reply {
+    float: right;
+    display: none;
+}
+
+.comment-reply i {
+    color: #bfc7d3;
+    padding: 4px 5px 6px;
+    border-radius: 2rem;
+    transition: $linear-transition;
+}
+
+.comment-reply i:hover {
+    background: #8090a8;
+    color: #fff;
+}
+
+.comment .col-lg-7 {
+    margin-top: 1rem;
+}
+
+.form-check {
+    padding-left: 1.5rem;
+    padding-bottom: 0.4rem;
+    font-size: 11pt;
+}
+
+@media (max-width: $medium-max) {
+    .comment .col-lg-7 {
+        margin: 0;
+    }
+
+    form textarea {
+        margin-top: 0.25rem !important;
+    }
+}
+
+.form-control {
+    margin-bottom: 10px;
+}
+
+.form-control:focus {
+    outline: 0;
+    color: #495057;
+    background-color: #fff;
+    border-color: rgba(61, 90, 254, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(61, 90, 254, 0.25);
+}
+
+textarea {
+    width: 100%;
+    margin: 0;
+    height: 7rem;
+    min-height: 7rem;
+}
+
+.button:focus {
+    outline: 0;
+}
+
+.custom-control-label::after,
+.custom-control-label::before {
+    top: 0.15rem;
+}
+
+.custom-control-input:active ~ .custom-control-label::before {
+    background-color: rgba(61, 90, 254, 0.25);
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: $primary-color;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(61, 90, 254, 0.25);
+}

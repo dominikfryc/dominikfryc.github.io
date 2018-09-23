@@ -45,4 +45,8 @@ $(document).ready(function() {
         $("html, body").animate({ scrollTop: $("#comments").offset().top }, "slow");
     });
 
+    // Hamburger menu
+    $(".hamburger").click(function() {
+        $(this).toggleClass("is-active");
+    });
 });
