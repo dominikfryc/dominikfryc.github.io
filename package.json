@@ -9,6 +9,6 @@
     "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.1.0",
-    "lodash": "^4.17.10"
+    "lodash": "^4.17.19"
   }
 }
